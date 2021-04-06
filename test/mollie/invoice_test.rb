@@ -38,7 +38,7 @@ module Mollie
       assert_equal Time.parse("2016-08-31"), invoice.issue_date
       assert_equal Time.parse("2016-09-14"), invoice.due_date
       assert_equal 45.0, invoice.amount.net
-      assert_equal BigDecimal.new(9.45, 3), invoice.amount.vat
+      assert_equal BigDecimal9.45, 3), invoice.amount.vat
       assert_equal 54.45, invoice.amount.gross
 
       line = invoice.lines.first

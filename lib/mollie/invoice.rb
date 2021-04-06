@@ -8,15 +8,15 @@ module Mollie
       attr_accessor :net, :vat, :gross
 
       def net=(net)
-        @net = BigDecimal.new(net.to_s)
+        @net = BigDecimal(net.to_s)
       end
 
       def vat=(vat)
-        @vat = BigDecimal.new(vat.to_s, 2)
+        @vat = BigDecimal(vat.to_s, 2)
       end
 
       def gross=(gross)
-        @gross = BigDecimal.new(gross.to_s)
+        @gross = BigDecimal(gross.to_s)
       end
     end
 
@@ -24,7 +24,7 @@ module Mollie
       attr_accessor :period, :description, :count, :vat_percentage, :amount
 
       def amount=(amount)
-        @amount = BigDecimal.new(amount.to_s)
+        @amount = BigDecimal(amount.to_s)
       end
     end
 

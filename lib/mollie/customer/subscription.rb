@@ -50,7 +50,7 @@ module Mollie
       end
 
       def amount=(amount)
-        @amount = BigDecimal.new(amount.to_s)
+        @amount = BigDecimal(amount.to_s)
       end
 
       def times=(times)

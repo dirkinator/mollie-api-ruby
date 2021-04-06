@@ -16,7 +16,7 @@ module Mollie
       refund = Refund.new(attributes)
 
       assert_equal "re_4qqhO89gsT", refund.id
-      assert_equal BigDecimal.new("5.95"), refund.amount
+      assert_equal BigDecimal("5.95"), refund.amount
       assert_kind_of Payment, refund.payment
       assert_equal Time.parse("2016-10-08T07:59:53.0Z"), refund.refunded_datetime
       assert_equal Refund::STATUS_PENDING, refund.status

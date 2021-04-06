@@ -100,15 +100,15 @@ module Mollie
     end
 
     def amount=(amount)
-      @amount = BigDecimal.new(amount.to_s) if amount
+      @amount = BigDecimal(amount.to_s) if amount
     end
 
     def amount_remaining=(amount_remaining)
-      @amount_remaining = BigDecimal.new(amount_remaining.to_s) if amount_remaining
+      @amount_remaining = BigDecimal(amount_remaining.to_s) if amount_remaining
     end
 
     def amount_refunded=(amount_refunded)
-      @amount_refunded = BigDecimal.new(amount_refunded.to_s) if amount_refunded
+      @amount_refunded = BigDecimal(amount_refunded.to_s) if amount_refunded
     end
 
     def payment_url

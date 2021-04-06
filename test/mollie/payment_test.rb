@@ -118,7 +118,7 @@ module Mollie
       refund = Payment.new(id: "pay-id").refunds.create(amount: 1.95)
 
       assert_equal "my-id", refund.id
-      assert_equal BigDecimal.new("1.95"), refund.amount
+      assert_equal BigDecimal("1.95"), refund.amount
     end
 
     def test_delete_refund

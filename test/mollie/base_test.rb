@@ -53,7 +53,7 @@ module Mollie
       resource = TestObject.create(amount: 1.95)
 
       assert_equal "my-id", resource.id
-      assert_equal BigDecimal.new("1.00"), resource.amount
+      assert_equal BigDecimal("1.00"), resource.amount
     end
 
     def test_nested_create
@@ -65,7 +65,7 @@ module Mollie
 
       assert_equal "my-id", resource.id
       assert_equal "object-id", resource.testobject_id
-      assert_equal BigDecimal.new("1.00"), resource.amount
+      assert_equal BigDecimal("1.00"), resource.amount
     end
 
     def test_update
@@ -76,7 +76,7 @@ module Mollie
       resource = TestObject.update("my-id", amount: 1.95)
 
       assert_equal "my-id", resource.id
-      assert_equal BigDecimal.new("1.00"), resource.amount
+      assert_equal BigDecimal("1.00"), resource.amount
     end
 
     def test_update_instance
@@ -88,7 +88,7 @@ module Mollie
       resource.update(amount: 1.95)
 
       assert_equal "my-id", resource.id
-      assert_equal BigDecimal.new("1.00"), resource.amount
+      assert_equal BigDecimal("1.00"), resource.amount
     end
 
     def test_nested_update
@@ -100,7 +100,7 @@ module Mollie
 
       assert_equal "my-id", resource.id
       assert_equal "object-id", resource.testobject_id
-      assert_equal BigDecimal.new("1.00"), resource.amount
+      assert_equal BigDecimal("1.00"), resource.amount
     end
 
     def test_nested_update_instance
@@ -113,7 +113,7 @@ module Mollie
 
       assert_equal "my-id", resource.id
       assert_equal "object-id", resource.testobject_id
-      assert_equal BigDecimal.new("1.00"), resource.amount
+      assert_equal BigDecimal("1.00"), resource.amount
     end
 
     def test_delete

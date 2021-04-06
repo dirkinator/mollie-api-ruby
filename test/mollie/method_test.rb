@@ -20,8 +20,8 @@ module Mollie
 
       assert_equal "creditcard", method.id
       assert_equal "Credit card", method.description
-      assert_equal BigDecimal.new("0.31"), method.minimum_amount
-      assert_equal BigDecimal.new("10000.0"), method.maximum_amount
+      assert_equal BigDecimal("0.31"), method.minimum_amount
+      assert_equal BigDecimal("10000.0"), method.maximum_amount
       assert_equal "https://www.mollie.com/images/payscreen/methods/creditcard.png", method.normal_image
       assert_equal "https://www.mollie.com/images/payscreen/methods/creditcard@2x.png", method.bigger_image
     end
